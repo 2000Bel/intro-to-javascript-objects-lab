@@ -87,11 +87,12 @@ Hint:
   - Pokemon 7: Squirtle evolves into Pokemon 8: Wartortle
   - Pokemon 25: Pikachu evolves into Pokemon 26: Raichu
 
-More Hints: The existing starter Pokemon will be *replaced* in your party with the Pokemon it evolved into. When working with an array of objects, the splice() array method is ideal for replacing one element with another. 
+More Hints: The existing starter Pokemon will be *replaced* in your party with the Pokemon it evolved into. 
+When working with an array of objects, the splice() array method is ideal for replacing one element with another. 
 Solve Exercise 7 here:
 */
 
-const evolvedPokemon = pokemon.find(pokemon => pokemon.number === starterPokemon.evolveTo);
+const evolvedPokemon = pokemon.find(pokemon => pokemon.number === starterPokemon.number ++);
 game.party.splice(game.party.indexOf(starterPokemon), 1, evolvedPokemon);
 console.log(game.party);
 
